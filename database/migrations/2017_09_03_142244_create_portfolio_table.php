@@ -19,6 +19,7 @@ class CreatePortfolioTable extends Migration
             $table->string('description');
             $table->string('url');
             $table->string('category');
+            $table->string('box_size')->nullable(); //height-2x || width-2x
             $table->timestamps();
         });
     }

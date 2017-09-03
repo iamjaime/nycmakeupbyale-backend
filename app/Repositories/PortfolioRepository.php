@@ -44,12 +44,7 @@ class PortfolioRepository
     public function create(array $data)
     {
         $this->portfolio = new Portfolio();
-        $this->portfolio->forceFill([
-            'title' => $data['title'],
-            'description' => $data['description'],
-            'url' => $data['url'],
-            'category' => $data['category']
-        ]);
+        $this->portfolio->fill($data);
 
         $this->portfolio->save();
         return $this->portfolio;
